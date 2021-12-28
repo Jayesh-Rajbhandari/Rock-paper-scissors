@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #003699;
+    --secondary-color:#b81818;
+    --draw-color:#d6d609;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #8EC5FC;
+    background:#ececec;
+
+}
+.heading{
+    text-align: center;
+}
+.score-board{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.score-board p:nth-child(1){
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 0;
+    width: 50%;
+}
+.score-board p:nth-child(2){
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px 0;
+    width: 50%;
+}
+.selection-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.choices{
+  
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.choices i{
+    margin-top: 30px;
+}
+.choices i:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.75rem #003699);
+}
+.restart{
+    display: none;
+    border: none;
+    padding: 2px;
+    background-color: #d4d3d3;
+    font-size: 1.2rem;
+}
+.restart:hover{
+    cursor: pointer;
+    background:var(--primary-color);
+    color: #fff;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-content{
+    background: #fff;
+    text-align: center;
+    margin: 10% auto;
+    width: 350px;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    
+}
+
+.win{
+    color: rgb(45, 211, 45);
+}
+.loose{
+    color: var(--secondary-color);
+}
+.draw{
+    color: var(--draw-color);
+}
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+.modal p{
+    font-size: 1.3rem;
+}
+@media (max-width: 700px) {
+    .choice {
+      font-size: 110px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .choice {
+      font-size: 80px;
+    }
+  }
+  @media (max-width: 300px) {
+    .choice {
+      font-size: 60px;
+    }
+  }
